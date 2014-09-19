@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F740D4BB19CCD16300C3FCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */; };
+		F740D4BE19CCD16300C3FCDB /* mySpotify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F740D4BC19CCD16300C3FCDB /* mySpotify.xcdatamodeld */; };
+		F740D4C019CCD16300C3FCDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740D4BF19CCD16300C3FCDB /* ViewController.swift */; };
+		F740D4C319CCD16300C3FCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F740D4C119CCD16300C3FCDB /* Main.storyboard */; };
+		F740D4C519CCD16300C3FCDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F740D4C419CCD16300C3FCDB /* Images.xcassets */; };
+		F740D4C819CCD16300C3FCDB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F740D4C619CCD16300C3FCDB /* LaunchScreen.xib */; };
+		F740D4D419CCD16300C3FCDB /* mySpotifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740D4D319CCD16300C3FCDB /* mySpotifyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F740D4CE19CCD16300C3FCDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F740D4AD19CCD16300C3FCDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F740D4B419CCD16300C3FCDB;
+			remoteInfo = mySpotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F740D4B519CCD16300C3FCDB /* mySpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F740D4B919CCD16300C3FCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F740D4BD19CCD16300C3FCDB /* mySpotify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mySpotify.xcdatamodel; sourceTree = "<group>"; };
+		F740D4BF19CCD16300C3FCDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F740D4C219CCD16300C3FCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F740D4C419CCD16300C3FCDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F740D4C719CCD16300C3FCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F740D4CD19CCD16300C3FCDB /* mySpotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySpotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F740D4D219CCD16300C3FCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F740D4D319CCD16300C3FCDB /* mySpotifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySpotifyTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F740D4B219CCD16300C3FCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F740D4CA19CCD16300C3FCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F740D4AC19CCD16300C3FCDB = {
+			isa = PBXGroup;
+			children = (
+				F740D4B719CCD16300C3FCDB /* mySpotify */,
+				F740D4D019CCD16300C3FCDB /* mySpotifyTests */,
+				F740D4B619CCD16300C3FCDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F740D4B619CCD16300C3FCDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F740D4B519CCD16300C3FCDB /* mySpotify.app */,
+				F740D4CD19CCD16300C3FCDB /* mySpotifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F740D4B719CCD16300C3FCDB /* mySpotify */ = {
+			isa = PBXGroup;
+			children = (
+				F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */,
+				F740D4BF19CCD16300C3FCDB /* ViewController.swift */,
+				F740D4C119CCD16300C3FCDB /* Main.storyboard */,
+				F740D4C419CCD16300C3FCDB /* Images.xcassets */,
+				F740D4C619CCD16300C3FCDB /* LaunchScreen.xib */,
+				F740D4BC19CCD16300C3FCDB /* mySpotify.xcdatamodeld */,
+				F740D4B819CCD16300C3FCDB /* Supporting Files */,
+			);
+			path = mySpotify;
+			sourceTree = "<group>";
+		};
+		F740D4B819CCD16300C3FCDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F740D4B919CCD16300C3FCDB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F740D4D019CCD16300C3FCDB /* mySpotifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F740D4D319CCD16300C3FCDB /* mySpotifyTests.swift */,
+				F740D4D119CCD16300C3FCDB /* Supporting Files */,
+			);
+			path = mySpotifyTests;
+			sourceTree = "<group>";
+		};
+		F740D4D119CCD16300C3FCDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F740D4D219CCD16300C3FCDB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F740D4B419CCD16300C3FCDB /* mySpotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F740D4D719CCD16300C3FCDB /* Build configuration list for PBXNativeTarget "mySpotify" */;
+			buildPhases = (
+				F740D4B119CCD16300C3FCDB /* Sources */,
+				F740D4B219CCD16300C3FCDB /* Frameworks */,
+				F740D4B319CCD16300C3FCDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mySpotify;
+			productName = mySpotify;
+			productReference = F740D4B519CCD16300C3FCDB /* mySpotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F740D4CC19CCD16300C3FCDB /* mySpotifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F740D4DA19CCD16300C3FCDB /* Build configuration list for PBXNativeTarget "mySpotifyTests" */;
+			buildPhases = (
+				F740D4C919CCD16300C3FCDB /* Sources */,
+				F740D4CA19CCD16300C3FCDB /* Frameworks */,
+				F740D4CB19CCD16300C3FCDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F740D4CF19CCD16300C3FCDB /* PBXTargetDependency */,
+			);
+			name = mySpotifyTests;
+			productName = mySpotifyTests;
+			productReference = F740D4CD19CCD16300C3FCDB /* mySpotifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F740D4AD19CCD16300C3FCDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Louis Cheung";
+				TargetAttributes = {
+					F740D4B419CCD16300C3FCDB = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					F740D4CC19CCD16300C3FCDB = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = F740D4B419CCD16300C3FCDB;
+					};
+				};
+			};
+			buildConfigurationList = F740D4B019CCD16300C3FCDB /* Build configuration list for PBXProject "mySpotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F740D4AC19CCD16300C3FCDB;
+			productRefGroup = F740D4B619CCD16300C3FCDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F740D4B419CCD16300C3FCDB /* mySpotify */,
+				F740D4CC19CCD16300C3FCDB /* mySpotifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F740D4B319CCD16300C3FCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F740D4C319CCD16300C3FCDB /* Main.storyboard in Resources */,
+				F740D4C819CCD16300C3FCDB /* LaunchScreen.xib in Resources */,
+				F740D4C519CCD16300C3FCDB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F740D4CB19CCD16300C3FCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F740D4B119CCD16300C3FCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F740D4C019CCD16300C3FCDB /* ViewController.swift in Sources */,
+				F740D4BE19CCD16300C3FCDB /* mySpotify.xcdatamodeld in Sources */,
+				F740D4BB19CCD16300C3FCDB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F740D4C919CCD16300C3FCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F740D4D419CCD16300C3FCDB /* mySpotifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F740D4CF19CCD16300C3FCDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F740D4B419CCD16300C3FCDB /* mySpotify */;
+			targetProxy = F740D4CE19CCD16300C3FCDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F740D4C119CCD16300C3FCDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F740D4C219CCD16300C3FCDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F740D4C619CCD16300C3FCDB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F740D4C719CCD16300C3FCDB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F740D4D519CCD16300C3FCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F740D4D619CCD16300C3FCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F740D4D819CCD16300C3FCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mySpotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F740D4D919CCD16300C3FCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mySpotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F740D4DB19CCD16300C3FCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mySpotifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySpotify.app/mySpotify";
+			};
+			name = Debug;
+		};
+		F740D4DC19CCD16300C3FCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mySpotifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySpotify.app/mySpotify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F740D4B019CCD16300C3FCDB /* Build configuration list for PBXProject "mySpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F740D4D519CCD16300C3FCDB /* Debug */,
+				F740D4D619CCD16300C3FCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F740D4D719CCD16300C3FCDB /* Build configuration list for PBXNativeTarget "mySpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F740D4D819CCD16300C3FCDB /* Debug */,
+				F740D4D919CCD16300C3FCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F740D4DA19CCD16300C3FCDB /* Build configuration list for PBXNativeTarget "mySpotifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F740D4DB19CCD16300C3FCDB /* Debug */,
+				F740D4DC19CCD16300C3FCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F740D4BC19CCD16300C3FCDB /* mySpotify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F740D4BD19CCD16300C3FCDB /* mySpotify.xcdatamodel */,
+			);
+			currentVersion = F740D4BD19CCD16300C3FCDB /* mySpotify.xcdatamodel */;
+			path = mySpotify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F740D4AD19CCD16300C3FCDB /* Project object */;
+}
