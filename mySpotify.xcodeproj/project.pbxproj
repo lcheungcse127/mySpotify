@@ -79,12 +79,11 @@
 		F740D4B719CCD16300C3FCDB /* mySpotify */ = {
 			isa = PBXGroup;
 			children = (
-				F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */,
-				F740D4BF19CCD16300C3FCDB /* ViewController.swift */,
+				F740D4C619CCD16300C3FCDB /* LaunchScreen.xib */,
 				F740D4C119CCD16300C3FCDB /* Main.storyboard */,
 				F740D4C419CCD16300C3FCDB /* Images.xcassets */,
-				F740D4C619CCD16300C3FCDB /* LaunchScreen.xib */,
 				F740D4BC19CCD16300C3FCDB /* mySpotify.xcdatamodeld */,
+				F740D4BF19CCD16300C3FCDB /* ViewController.swift */,
 				F740D4B819CCD16300C3FCDB /* Supporting Files */,
 			);
 			path = mySpotify;
@@ -93,6 +92,7 @@
 		F740D4B819CCD16300C3FCDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */,
 				F740D4B919CCD16300C3FCDB /* Info.plist */,
 			);
 			name = "Supporting Files";
