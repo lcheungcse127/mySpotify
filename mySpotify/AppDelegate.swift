@@ -12,20 +12,28 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    // ------------------------------------------------------------------------------------------------- MARK: - Spotify
+// ----------------------------------------------------------------------------------------------------- MARK: - Spotify
 
     // OAuth Properties
     let kClientId = "02e882e54f34457481270fe96b0ff1b9"
-    let kCallbackUrl = "mySpotify://callback"
+    let kCallbackUrl = "myspotify://callback"
     let kTokenSwapUrl = "http://localhost:1234/swap"
 
-    var session: SPTSession?
     var player: SPTAudioStreamingController?
+
+    func spotifyLoginAuthentication() {
+        let auth = SPTAuth.defaultInstance()
+        let loginUrl = auth.loginURLForClientId(kClientId,
+            declaredRedirectURL: NSURL.URLWithString(kCallbackUrl),
+            scopes: [SPTAuthStreamingScope])
+
+        UIApplication.sharedApplication().openURL(loginUrl);
+    }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String,
         annotation: AnyObject?) -> Bool
     {
-        // Handle auth callback.
+        // Ask SPTAuth if the URL given is a Spotify authentication callback.
         if SPTAuth.defaultInstance().canHandleURL(url, withDeclaredRedirectURL: NSURL.URLWithString(kCallbackUrl)) {
             // Call the token swap service to get a logged in session.
             SPTAuth.defaultInstance().handleAuthCallbackWithTriggeredAuthURL(url,
@@ -47,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func playUsingSession(session: SPTSession) {
+        NSLog("playUsingSession")
+
         // Create a new player if needed.
         if self.player == nil {
             self.player = SPTAudioStreamingController()
@@ -71,20 +81,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
     }
 
-    // ----------------------------------------------------------------------------------- MARK: - Application Lifecycle
+// --------------------------------------------------------------------------------------- MARK: - Application Lifecycle
 
     var window: UIWindow?
 
     func application(application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        // Create SPTAuth instance; create login URL and open it.
-        let auth = SPTAuth.defaultInstance()
-        let loginURL: NSURL = auth.loginURLForClientId(kClientId,
-            declaredRedirectURL: NSURL.URLWithString(kCallbackUrl),
-            scopes: [SPTAuthStreamingScope])
-        application.openURL(loginURL)
-
+        self.spotifyLoginAuthentication()
         return true
     }
 
@@ -119,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    // ----------------------------------------------------------------------------------------- MARK: - Core Data Stack
+// --------------------------------------------------------------------------------------------- MARK: - Core Data Stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named 
@@ -176,7 +180,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return managedObjectContext
     }()
 
-    // -------------------------------------------------------------------------------- MARK: - Core Data Saving Support
+// ------------------------------------------------------------------------------------ MARK: - Core Data Saving Support
 
     func saveContext () {
         if let moc = self.managedObjectContext {
