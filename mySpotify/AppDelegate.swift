@@ -40,18 +40,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 tokenSwapServiceEndpointAtURL: NSURL.URLWithString(kTokenSwapUrl),
                 callback: { (error: NSError!, session: SPTSession!) -> Void in
                     if error != nil {
-                        NSLog("*** Auth error: %@", error)
+                        NSLog("Authorization error: %@", error)
                         return
                     }
 
-                    // Call the -playUsingSession: method to play a track.
+                    // Call the playUsingSession: method to play a track.
                     self.playUsingSession(session)
                 }
             )
+
             return true
         }
-
-        return false
+        else {
+            NSLog("SPTAuth could not handle the callback URL.")
+            return false
+        }
     }
 
     func playUsingSession(session: SPTSession) {

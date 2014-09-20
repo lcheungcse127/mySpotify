@@ -37,7 +37,7 @@ require 'sqlite3'
 
 CLIENT_ID = "02e882e54f34457481270fe96b0ff1b9"
 CLIENT_SECRET = "8e73c0b1ab8d4f2fb39168c455952223"
-CLIENT_CALLBACK_URL = "mySpotify://callback"
+CLIENT_CALLBACK_URL = "myspotify://callback"
 AUTH_HEADER = "Basic " + Base64.strict_encode64(CLIENT_ID + ":" + CLIENT_SECRET)
 SPOTIFY_ACCOUNTS_ENDPOINT = URI.parse("https://accounts.spotify.com")
 SPOTIFY_API_ENDPOINT = URI.parse("https://api.spotify.com")
