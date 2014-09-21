@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 tokenSwapServiceEndpointAtURL: NSURL.URLWithString(kTokenSwapUrl),
                 callback: { (error: NSError!, session: SPTSession!) -> Void in
                     if error != nil {
-                        NSLog("Authorization error: %@", error)
+                        NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__,  error)
                         return
                     }
 
@@ -52,14 +52,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         else {
-            NSLog("SPTAuth could not handle the callback URL.")
+            NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, "SPTAuth could not handle the callback URL.")
             return false
         }
     }
 
     func playUsingSession(session: SPTSession) {
-        NSLog("playUsingSession")
-
         // Create a new player if needed.
         if self.player == nil {
             self.player = SPTAudioStreamingController()
@@ -67,14 +65,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.player?.loginWithSession(session, callback: { (error: NSError!) -> Void in
             if error != nil {
-                NSLog("*** Enabling playback got error: %@", error)
+                NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, error)
                 return
             }
 
             SPTRequest.requestItemAtURI(NSURL.URLWithString("spotify:album:4L1HDyfdGIkACuygktO7T7"),
                 withSession: nil, callback: { (error: NSError!, album: AnyObject!) -> Void in
                     if error !=  nil {
-                        NSLog("*** Album lookup got error %@", error)
+                        NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, error)
                         return
                     }
 
