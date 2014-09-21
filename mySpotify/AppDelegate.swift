@@ -14,72 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // ----------------------------------------------------------------------------------------------------- MARK: - Spotify
 
-    // OAuth Properties
-    let kClientId = "02e882e54f34457481270fe96b0ff1b9"
-    let kCallbackUrl = "myspotify://callback"
-    let kTokenSwapUrl = "http://localhost:1234/swap"
+    var spotifyAuthenticationViewController: SpotifyAuthenticationViewController?
 
-    var player: SPTAudioStreamingController?
-
-    func spotifyLoginAuthentication() {
-        let auth = SPTAuth.defaultInstance()
-        let loginUrl = auth.loginURLForClientId(kClientId,
-            declaredRedirectURL: NSURL.URLWithString(kCallbackUrl),
-            scopes: [SPTAuthStreamingScope])
-
-        UIApplication.sharedApplication().openURL(loginUrl);
-    }
-
+    // This method is called after user has authenticated with Spotify.
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String,
         annotation: AnyObject?) -> Bool
     {
-        // Ask SPTAuth if the URL given is a Spotify authentication callback.
-        if SPTAuth.defaultInstance().canHandleURL(url, withDeclaredRedirectURL: NSURL.URLWithString(kCallbackUrl)) {
-            // Call the token swap service to get a logged in session.
-            SPTAuth.defaultInstance().handleAuthCallbackWithTriggeredAuthURL(url,
-                tokenSwapServiceEndpointAtURL: NSURL.URLWithString(kTokenSwapUrl),
-                callback: { (error: NSError!, session: SPTSession!) -> Void in
-                    if error != nil {
-                        NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__,  error)
-                        return
-                    }
-
-                    // Call the playUsingSession: method to play a track.
-                    self.playUsingSession(session)
-                }
-            )
-
-            return true
+        if let unwrappedObject = self.spotifyAuthenticationViewController {
+            return unwrappedObject.spotifyAuthenticationCallbackUrl(url)
         }
         else {
-            NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, "SPTAuth could not handle the callback URL.")
             return false
         }
-    }
-
-    func playUsingSession(session: SPTSession) {
-        // Create a new player if needed.
-        if self.player == nil {
-            self.player = SPTAudioStreamingController()
-        }
-
-        self.player?.loginWithSession(session, callback: { (error: NSError!) -> Void in
-            if error != nil {
-                NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, error)
-                return
-            }
-
-            SPTRequest.requestItemAtURI(NSURL.URLWithString("spotify:album:4L1HDyfdGIkACuygktO7T7"),
-                withSession: nil, callback: { (error: NSError!, album: AnyObject!) -> Void in
-                    if error !=  nil {
-                        NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, error)
-                        return
-                    }
-
-                    self.player?.playTrackProvider(album as SPTAlbum, callback: nil)
-                }
-            )
-        })
     }
 
 // --------------------------------------------------------------------------------------- MARK: - Application Lifecycle
@@ -89,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        self.spotifyLoginAuthentication()
         return true
     }
 
