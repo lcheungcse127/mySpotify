@@ -11,8 +11,6 @@ import UIKit
 
 class SpotifyAuthenticationViewController: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView!
-
     // Spotify OAuth
     let kClientId = "02e882e54f34457481270fe96b0ff1b9"
     let kCallbackUrl = "myspotify://callback"
@@ -21,15 +19,15 @@ class SpotifyAuthenticationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.webView.scrollView.scrollEnabled = false
-
         // Give the app delegate a reference to this class so that it can forward Spotify's authentication callback.
         (UIApplication.sharedApplication().delegate as AppDelegate).spotifyAuthenticationViewController = self
 
+        // Open Spotify authentication URL in Safari.
         let url = SPTAuth.defaultInstance().loginURLForClientId(kClientId,
             declaredRedirectURL: NSURL.URLWithString(kCallbackUrl),
             scopes: [SPTAuthStreamingScope])
-        self.webView.loadRequest(NSURLRequest(URL: url))
+
+        UIApplication.sharedApplication().openURL(url)
     }
 
     func spotifyAuthenticationCallbackUrl(url: NSURL) -> Bool {
