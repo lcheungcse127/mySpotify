@@ -33,6 +33,8 @@ class SpotifyAuthenticationViewController: UIViewController {
     }
 
     func spotifyAuthenticationCallbackUrl(url: NSURL) -> Bool {
+        // TODO: Implement this method.
+
         return true
     }
 }
