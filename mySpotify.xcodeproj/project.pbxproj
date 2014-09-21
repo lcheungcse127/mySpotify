@@ -98,8 +98,8 @@
 		F740D4B819CCD16300C3FCDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */,
 				F740D4EC19CD2BB800C3FCDB /* mySpotify-Bridging-Header.h */,
+				F740D4BA19CCD16300C3FCDB /* AppDelegate.swift */,
 				F740D4B919CCD16300C3FCDB /* Info.plist */,
 			);
 			name = "Supporting Files";

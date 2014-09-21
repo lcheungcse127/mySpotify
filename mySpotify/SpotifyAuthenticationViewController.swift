@@ -9,12 +9,16 @@
 import AVFoundation
 import UIKit
 
-class SpotifyAuthenticationViewController: UIViewController {
+class SpotifyAuthenticationViewController: UITabBarController {
 
     // Spotify OAuth
     let kClientId = "02e882e54f34457481270fe96b0ff1b9"
     let kCallbackUrl = "myspotify://callback"
     let kTokenSwapUrl = "http://localhost:1234/swap"
+
+    var spotifySession: SPTSession?
+
+// --------------------------------------------------------------------------------------------------- MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +34,34 @@ class SpotifyAuthenticationViewController: UIViewController {
         UIApplication.sharedApplication().openURL(url)
     }
 
-    func spotifyAuthenticationCallbackUrl(url: NSURL) -> Bool {
-        // TODO: Implement this method.
+// ---------------------------------------------------------------------------------------------- MARK: - User Interface
 
-        return true
+    func configureUserInterface() {
+
+    }
+
+// ----------------------------------------------------------------------------------------------------- MARK: - Network
+
+    func spotifyAuthenticationCallbackUrl(url: NSURL) -> Bool {
+        // Ask SPTAuth if the URL given is a Spotify authentication callback.
+        if SPTAuth.defaultInstance().canHandleURL(url, withDeclaredRedirectURL: NSURL.URLWithString(kCallbackUrl)) {
+            // Call the token swap service to get a logged in session.
+            SPTAuth.defaultInstance().handleAuthCallbackWithTriggeredAuthURL(url,
+                tokenSwapServiceEndpointAtURL: NSURL.URLWithString(kTokenSwapUrl),
+                callback: { (error: NSError!, session: SPTSession!) -> Void in
+                    if error != nil {
+                        NSLog("<%@:%d> %@", __FILE__.lastPathComponent, __LINE__, error)
+                    }
+                    else {
+                        self.spotifySession = session
+                        self.configureUserInterface()
+                    }
+                }
+            )
+            return true
+        }
+        else {
+            return false
+        }
     }
 }

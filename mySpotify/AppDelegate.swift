@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-// --------------------------------------------------------------------------------------- MARK: - Application Lifecycle
+// --------------------------------------------------------------------------------------------------- MARK: - Lifecycle
 
     var window: UIWindow?
 
