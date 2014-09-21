@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var spotifyAuthenticationViewController: SpotifyAuthenticationViewController?
 
-    // This method is called after user has authenticated with Spotify.
+    // This method is called after user has authenticated with Spotify in SpotifyAuthenticationViewController.
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String,
         annotation: AnyObject?) -> Bool
     {
